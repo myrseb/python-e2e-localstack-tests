@@ -27,7 +27,7 @@ jobs:
     - name: Checkout external repository
       uses: actions/checkout@v4
       with:
-        repository: "slawekradzyminski/awesome-localstack"
+        repository: "myrseb/awesome-localstack"
         path: "awesome-localstack"
     - name: Run Docker Compose
       run: |
@@ -91,7 +91,7 @@ jobs:
     - name: Checkout external repository
       uses: actions/checkout@v4
       with:
-        repository: "slawekradzyminski/awesome-localstack"
+        repository: "myrseb/awesome-localstack"
         path: "awesome-localstack"
     - name: Run Docker Compose
       run: |
@@ -131,7 +131,7 @@ jobs:
     - name: Checkout external repository
       uses: actions/checkout@v4
       with:
-        repository: "slawekradzyminski/awesome-localstack"
+        repository: "myrseb/awesome-localstack"
         path: "awesome-localstack"
     - name: Run Docker Compose
       run: |
