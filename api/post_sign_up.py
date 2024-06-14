@@ -4,6 +4,6 @@ from api.base_api import BaseAPI
 class SignUp(BaseAPI):
     def api_call(self, user: RegisterRequestDto):
         user_data = user.to_dict()
-        response = self.make_request("POST", "users/signup", json=user_data)
-        assert response.status_code == 201, "Failed to register"
-        return response.json()
+        headers = {'Content-Type': 'application/json'}
+        response = self.make_request("POST", "users/signup", json=user_data, headers=headers)
+        return response

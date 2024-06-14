@@ -29,7 +29,6 @@ def chrome_browser():
     yield browser
     browser.quit()
 
-
 @pytest.fixture
 def logged_in_test(chrome_browser: webdriver):
     user = setup_test_user()
@@ -39,22 +38,26 @@ def logged_in_test(chrome_browser: webdriver):
     yield HomePage(chrome_browser), login_response["token"], user
     DeleteUser().api_call(user.username, login_response["token"])
 
+@pytest.fixture
+def api_logged_in():
+    user = setup_test_user()
+    sign_in = SignIn()
+    response = sign_in.api_call(user.username, user.password)
+    token = response.json().get('token')
+    assert token is not None, "Login failed, no token retrieved"
+    yield token
+    DeleteUser().api_call(user.username, token)
 
 def setup_test_user():
     user = get_random_user()
-    SignUp().api_call(user)
+    register_response = SignUp().api_call(user)
+    assert register_response.status_code == 201, "Failed to register"
     return user
-
 
 def login_test_user(browser, user):
     browser.get(frontend_url)
     login_response = SignIn().api_call(user.username, user.password)
-    return login_response
-
-
-def cleanup_test_user(user, token):
-    delete_user(user.username, token)
-
+    return login_response.json()
 
 def setup_user_local_storage(browser, login_response):
     browser.execute_script(

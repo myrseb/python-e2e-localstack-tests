@@ -4,8 +4,8 @@
 tests/geckodriver.log
 tests/__pycache__/
 venv
-utils
 __pycache__
 .venv
 .env
 allure-results/
+python_e2e_localstack_tests.egg-info
