@@ -1,0 +1,94 @@
+INFO     WDM:logger.py:11 ====== WebDriver manager ======
+INFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+INFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+INFO     WDM:logger.py:11 Driver [/home/runner/.wdm/drivers/chromedriver/linux64/125.0.6422.141/chromedriver-linux64/chromedriver] found in cache
+INFO     http.client:base_api.py:17 Making POST request to URL: http://localhost:4001/users/signup
+INFO     http.client:base_api.py:21 Request Headers:
+{
+    "Content-Type": "application/json"
+}
+INFO     http.client:base_api.py:27 Request JSON Body:
+{
+    "username": "bryan35",
+    "password": "n5_XE0_1(q",
+    "email": "jessicabradley@example.org",
+    "firstName": "Justin",
+    "lastName": "Thompson",
+    "roles": [
+        "ROLE_ADMIN",
+        "ROLE_CLIENT"
+    ]
+}
+INFO     http.client:base_api.py:38 Response Status Code: 201
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Date": "Fri, 14 Jun 2024 15:34:43 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
+INFO     http.client:base_api.py:49 Response Body:
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnlhbjM1IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTcxODM3OTI4MywiZXhwIjoxNzE4Mzc5NTgzfQ.UsKhU_fmRwXDu8BCCr_R_BA7W5Hyny80EYkkBy7ECmw"
+}
+INFO     http.client:base_api.py:17 Making POST request to URL: http://localhost:4001/users/signin
+INFO     http.client:base_api.py:27 Request JSON Body:
+{
+    "username": "bryan35",
+    "password": "n5_XE0_1(q"
+}
+INFO     http.client:base_api.py:38 Response Status Code: 200
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Date": "Fri, 14 Jun 2024 15:34:44 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
+INFO     http.client:base_api.py:49 Response Body:
+{
+    "username": "bryan35",
+    "roles": [
+        "ROLE_ADMIN",
+        "ROLE_CLIENT"
+    ],
+    "firstName": "Justin",
+    "lastName": "Thompson",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnlhbjM1IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTcxODM3OTI4NCwiZXhwIjoxNzE4Mzc5NTg0fQ.EM5fhT3FcWb71HVjhhxX4PisyJEPU_viuTphv8zCSwg",
+    "email": "jessicabradley@example.org"
+}
+INFO     http.client:base_api.py:17 Making DELETE request to URL: http://localhost:4001/users/bryan35
+INFO     http.client:base_api.py:21 Request Headers:
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnlhbjM1IiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTcxODM3OTI4NCwiZXhwIjoxNzE4Mzc5NTg0fQ.EM5fhT3FcWb71HVjhhxX4PisyJEPU_viuTphv8zCSwg"
+}
+INFO     http.client:base_api.py:38 Response Status Code: 204
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Date": "Fri, 14 Jun 2024 15:34:44 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
